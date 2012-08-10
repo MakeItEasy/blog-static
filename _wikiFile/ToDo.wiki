@@ -1,0 +1,34 @@
+=== 20111021 ===
+<hr>
+==== DOS安装相关 ====
+	* [ ] http://wenku.baidu.com/view/b790b9ea998fcc22bcd10db7.html
+	* [ ] http://wenku.baidu.com/view/f20f86737fd5360cba1adbb4.html?from=rec&pos=0&weight=11&lastweight=4&count=5
+ 
+=== 20111020 ===
+<hr>
+==== C相关 ====
+	* [ ] 用getopt处理命令行参数 http://www.cnblogs.com/yixiaoyang/archive/2011/07/03/2096972.html
+
+=== 20110804 ===
+<hr>
+==== vimwiki 相关 ====
+	* [o] Vim设定文件大概说明调查
+	* [o] !VimWiki用模板下载
+	* [X] 康玉石 解密pdf软件
+
+==== 总结以前的 ====
+	* [ ] 嵌入式那一章
+	* [ ] Linux网络配置
+	* [ ] 使用Git维护一台机器上多个环境之间的代码
+	* [ ] c-study程序，多个环境下如何同步。HomePC和WorkPC
+	* [ ] 最近的计划
+	* [ ] Linux GDB（gdb）学习
+	* [ ] 关于vim中的强大的搜索功能学习
+	* [ ] 香港攻略
+	* [X] Java风云电影，youtobe
+
+=== 20110815 ===
+<hr>
+==== 工作事宜 ====
+	* [X] 照相
+	* [X] 休假说明

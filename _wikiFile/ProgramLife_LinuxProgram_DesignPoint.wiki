@@ -1,0 +1,7 @@
+* gcc`s options
+{{{
+-I: The include file dir to find head file
+-l: use the lib(static or unstatic)
+-L: The library directory where find the needed lib
+}}}
+* $$ : The progress ID

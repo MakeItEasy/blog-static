@@ -1,0 +1,27 @@
+%template ProgramLife
+%toc
+
+=== 安装 ===
+<hr>
+
+=== 我的主题的设定 ===
+<hr>
+* 和Javascript，CSS结合可以更强大
+* _vimrc中的一些个人设定
+
+=== 快捷键 ===
+<hr>
+* \ww: 打开主页
+* \ws: 选择不同的wiki目录
+* \wh: 生成Html文件
+* \whh: 生成Html文件并预览
+
+=== 帮助 ===
+<hr>
+* help vimwiki
+
+=== 好的资源 ===
+<hr>
+* [[http://wiki.ktmud.com/index.html|丘迟的维基世界]]
+* http://vimwiki.googlecode.com/hg/misc/Vimwiki1.1.1QR.pdf
+* http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx

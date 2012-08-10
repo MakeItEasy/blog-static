@@ -1,0 +1,9 @@
+%template ProgramLife
+%toc
+
+=== 命令 ===
+* 删除远程分支
+{{{
+# 前提是保证本地的该分支已经删除
+git push $remote_repo :$remote_branch #有个冒号不能省略 
+  }}}

@@ -1,0 +1,84 @@
+%template ProgramLife
+%toc
+
+=== 要安装插件一览 ===
+<hr>
+* csupport<br />
+	实现快捷添加代码，注释等。比如输入\im，就会帮你输入main函数的基本框架。<br />
+	还可以实现一键编译。
+* project<br />
+	用来构建项目的目录文件结构。
+* quickfix<br />
+	已经内置到vim中。
+* ctags<br />
+	已经内置到vim中。
+* taglist<br />
+* DoxygenToolkit<br />
+	结合linux下的doxygen命令，可以生成API文档用的工具。<br />
+	它主要是和vim结合生成符合规范的文档。
+
+=== csupport ===
+<hr>
+* 如何获得帮助<br />
+	* help csupport
+
+=== project ===
+<hr>
+* 安装<br />
+	# 到 www.vim.org 下载 project-1.4.1.tar.gz
+	# 解压该文件
+	# 将plugin目录下的project.vim拷贝到 $VIM\vimfiles\plugin 下面
+	# 将doc目录下的project.txt拷贝到 $VIM\vimfiles\doc 下面
+	# 在vim中执行 helptags $VIM\vimfiles\doc\ 
+* 如何获得帮助<br />
+	* help project
+* 中文帮助<br />
+	# 下载中文帮助文件，以project.cnx命名
+	# copy以上文件到帮助文档目录下。$VIM\vimfiles\doc\
+	# 在vim中执行 helptags $VIM\vimfiles\doc\ 
+
+=== ctags ===
+<hr>
+* 使用步骤<br />
+	# 使用ctags命令生成tags文件
+{{{
+  :!ctags ./src
+  }}}
+	# 设置vim的tags选项
+{{{
+  :set tags+=./tags
+  }}}
+	# 这样就可以使用这个目录下的tags了
+{{{
+  // 可以使用正则表达式
+  :tag main
+  }}}
+
+=== taglist ===
+<hr>
+* 如何获得帮助<br />
+	* help taglist.txt
+* 打开taglist窗口
+{{{
+  :TlistToggle
+  }}}
+
+=== Doxygen ===
+<hr>
+* DoxygenToolkit使用步骤，主要使用以下命令，生成可以用linux下doxygen工具用的注释文件<br />
+必要的时候，直接修改它自身的插件文件<br />
+	# DoxAuthor
+	# DoxLic
+	# Dox
+	# DoxBlock
+* doxygen命令使用<br />
+	# 使用以下命令生成模板文件
+{{{
+  // 如果有-s，生成的文件没有注释，否则有详细的注释，s：simple
+  doxygen -s -g filename
+  }}}
+	[[resource/02_resource/Doxyfile.txt|我做成的一个配置文件例子]]
+	# 使用下面的命令生成文档（输入和输出都在1中生成的配置文件中配置）
+{{{
+  doxygen configFileName
+  }}}

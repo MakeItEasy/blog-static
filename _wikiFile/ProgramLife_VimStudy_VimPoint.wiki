@@ -1,0 +1,7 @@
+%template ProgramLife
+%toc
+
+* 一定要注意，有时候encode都设置对了，但是还是在屏幕上显示乱码，那么可能是字体不支持。通过以下命令可以设置：
+{{{
+set guifont=*
+}}}

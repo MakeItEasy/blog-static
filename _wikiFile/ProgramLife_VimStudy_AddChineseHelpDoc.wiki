@@ -1,0 +1,19 @@
+%template ProgramLife
+%toc
+
+=== 添加步骤 ===
+<hr>
+* 下载中文帮助文档（cnx后缀）
+* 将下载的文档拷贝到正确的路径（$VIM\vimfiles\doc根目录下）
+* 更新帮助文件的tags，如：:helptags d:\soft\Vim\vimfiles\doc\	(_*事实上我并没有做这一步*_)
+
+=== 常用方法 ===
+<hr>
+* 因为默认的帮助是中文，所以可以通过在末尾加 @cn 来切换到中文。例如
+{{{
+  help set@cn
+  }}}
+* 也可以将默认的帮助文档设置为中文。
+{{{
+  set helplang=cn
+  }}}

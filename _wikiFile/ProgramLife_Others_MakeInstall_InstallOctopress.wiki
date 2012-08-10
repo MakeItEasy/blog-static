@@ -1,0 +1,32 @@
+%template ProgramLife
+%toc
+
+http://octopress.org/docs/
+
+# Download the rvm bash file.[rvm]<br />
+    https://rvm.beginrescueend.com/install/rvm
+# Execute the rvm bash file
+{{{
+./rvm
+  }}}
+# 手动下载yaml-0.1.4.tar.gz ，放到\home\moyan\.rvm\archives目录下，再重新运行：
+{{{
+rvm install 1.9.2 && rvm use 1.9.2
+  }}}
+# 删除了win32ole目录。（用ruby访问excel用的类库）
+# 执行 gem install bundler 命令时老是出错，报告以下错误：
+{{{
+Could not find a valid gem 'bundler' (>= 0) in any repository
+  }}}
+    原因是伟大的GFW把ruby网站给屏蔽了。<br />解决方法：用代理翻墙。<br />在cygwin中设置全局代理：
+{{{
+export http_proxy=http://127.0.0.1:8580
+  }}}
+# bundle install时，好几个依赖包都安装出错，我的做法是直接把他们从 Gemfile.lock 文件中移走。
+{{{
+posix-spawn（一直装不上，老报错）
+sass（通过gem install sass 可以安装，但是版本是3.1.10，不是3.1.5）
+  }}}
+# 最后安装是都成功了，但是就是因为有6中两个依赖包的问题，rake generate时总是报错，所以生不成_deploy中的文件。
+
+到此为止。转向vimpress

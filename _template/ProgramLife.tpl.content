@@ -1,0 +1,51 @@
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>程序语言类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="%root_path%ProgramLife_AssemblyStudy.html">汇编语言</a>
+		</li>
+		<li>
+			<a href="%root_path%ProgramLife_CLanguageStudy.html">C语言</a>
+		</li>
+		<li>
+			<a href="%root_path%ProgramLife_LinuxProgram.html">Linux学习</a>
+		</li>
+	</ul>
+	<b>工具类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="%root_path%ProgramLife_VimStudy.html">Vim</a>
+		</li>
+		<li>
+			<a href="%root_path%ProgramLife_GitStudy.html">Git</a>
+		</li>
+	</ul>
+	<b>其他</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="%root_path%ProgramLife_Others_OftenUse.html">常用整理</a>
+		</li>
+		<li>
+			<a href="%root_path%ProgramLife_Others_Knowledge.html">小常识</a>
+		</li>
+		<li>
+			<a href="%root_path%ProgramLife_Others_MakeInstall.html">各种构筑过程</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="%root_path%index.html">首页</a>&nbsp;>&nbsp;
+		<a href="%root_path%ProgramLife.html">程序生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		%content%
+	</div>
+</div>

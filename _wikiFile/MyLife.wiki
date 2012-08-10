@@ -1,0 +1,5 @@
+%template MyLife
+%toc
+
+* [[MyLife_Wenny|不能说的秘密]]
+* [[MyLife_Something|杂七杂八]]

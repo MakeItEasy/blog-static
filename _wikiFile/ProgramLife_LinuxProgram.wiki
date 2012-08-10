@@ -1,0 +1,24 @@
+%template ProgramLife
+%toc
+
+
+* [[ProgramLife_LinuxProgram_DesignPoint|Linux程序设计整理要点]]
+
+* [[ProgramLife_LinuxProgram_Command|在Linux程序设计书中学到的命令]]
+
+* man help 编号意义
+
+    | 领域 | 描述               | 说明                                                |
+    |------+--------------------+-----------------------------------------------------|
+    | 1    | 用户命令           | 可由任何人启动的,如env、cat、man、touch文档         |
+    | 2    | 系统调用或内核函数 | 即由内核提供的函数 如link、sethostname、mkdir       |
+    | 3    | 库程序             | 即库函数 如acosh、asctime、btree、locale            |
+    | 4    | 与设备有关的信息   | 即/dev目录下的特殊文件 如zero null sda              |
+    | 5    | 文件格式描述       | 如/etc/passwd 文件格式描述说明在这个分类下          |
+    | 6    | 游戏               | 游戏的帮助文件                                      |
+    | 7    | 其他               | 包括 宏命令包、惯例等如 arp、boot、regex、unix utf8 |
+    | 8    | 系统管理           | 只能由root启动 如fdisk、fsck、renice、rpm、yum      |
+    | 9    | 内核               | 用来存放内核例行程序的文档                          |
+    | n    | 新文档             | 可能要移到更适合的领域                              |
+    | o    | 老文档             | 可能会在一段期限内保留                              |
+    | l    | 本地文档           | 与本特定系统有关的                                  |

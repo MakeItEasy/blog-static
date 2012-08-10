@@ -1,0 +1,25 @@
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>点滴生活</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="%root_path%MyLife_Wenny.html">不能说的秘密</a>
+		</li>
+		<li>
+			<a href="%root_path%MyLife_Something.html">杂七杂八</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="%root_path%index.html">首页</a>&nbsp;>&nbsp;
+		<a href="%root_path%MyLife_Something.html">点滴生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		%content%
+	</div>
+</div>

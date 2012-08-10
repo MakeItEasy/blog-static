@@ -1,0 +1,8 @@
+%template ProgramLife
+%toc
+
+* [[ProgramLife_Others_OftenUse_RestAutoMailContent|休假自动邮件回复内容]]
+* [[ProgramLife_Others_OftenUse_TotalCmdHotKey|TotalCmd常用快捷键]]
+* [[ProgramLife_Others_OftenUse_Win7HotKey|Windows7常用快捷键]]
+* [[ProgramLife_Others_OftenUse_FreeGate|翻墙专题]]
+* [[ProgramLife_Others_OftenUse_SoftwareList|常用软件列表]]

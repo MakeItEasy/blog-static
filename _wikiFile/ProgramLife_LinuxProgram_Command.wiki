@@ -1,0 +1,5 @@
+%toc
+
+=== 命令一览 ===
+* nm(P11):list symbols from object files
+* ldd(P12):查看一个程序需要的共享库(libXXX.so库)

@@ -1,0 +1,19 @@
+%template ProgramLife
+%toc
+
+=== 安装 ===
+<hr>
+* 从以下网址下载cvim.zip包<br />
+	http://www.vim.org/scripts/script.php?script_id=213
+* 把cvim.zip包解压到以下目录<br />
+{{{
+	$VIM\vimfiles\
+  }}}
+* 执行下列命令，使c-support的帮助文档可用<br />
+{{{
+	:helptags $HOME\vimfiles\doc\
+  }}}
+
+=== 使用注意 ===
+<hr>
+* 通过  _*:help csupport*_  可以打开c-support的帮助文档

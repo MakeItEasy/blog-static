@@ -1,0 +1,22 @@
+%template ProgramLife
+%toc
+
+=== Summary ===
+<hr>
+* [[ProgramLife_AssemblyStudy_Register|寄存器学习]]
+* [[ProgramLife_AssemblyStudy_CommandStudy|指令学习]]
+* [[ProgramLife_AssemblyStudy_PseudoInstructionStudy|伪指令&操作符学习]]
+* [[ProgramLife_AssemblyStudy_Notice|注意事项总结]]
+* [[ProgramLife_AssemblyStudy_AddressAccess|寻址方式总结]]
+* [[ProgramLife_AssemblyStudy_Interrupt|中断]]
+* [[ProgramLife_AssemblyStudy_Port|端口]]
+
+=== Resource && website ===
+<hr>
+* [http://www.aogosoft.com/index.asp?format=text AoGo汇编小站]
+* [http://www.docin.com/p-195211142.html 王爽课后习题答案]
+* [[resource\01_book\TheAnswerOfAssembly(wangshuang).chm|王爽课后习题答案chm版]]
+
+=== TODOs & FAQ ===
+<hr>
+* 怎么判断是有符号数的运算还是无符号的运算？

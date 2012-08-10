@@ -1,0 +1,26 @@
+%template ProgramLife
+%toc
+
+=== 平时结合实例总结 ===
+<hr>
+
+=== 系统学习 ===
+<hr>
+
+=== 总结概念 ===
+<hr>
+* [[resource\01_book\Memory management in C The heap and the stack.pdf|一篇非常好的讲解堆和栈的论文]]
+* 大端模式和小端模式
+{{{
+端模式（Endian）的这个词出自JonathanSwift书写的《格列佛游记》。这本书根据将鸡蛋敲开的方法不同将所有的人分为两类，
+从圆头开始将鸡蛋敲开的人被归为BigEndian，从尖头开始将鸡蛋敲开的人被归为LittileEndian。小人国的内战就源于吃鸡蛋时是究竟从
+大头（Big-Endian）敲开还是从小头（Little-Endian）敲开。在计算机业BigEndian和LittleEndian也几乎引起一场战争。
+在计算机业界，Endian表示数据在存储器中的存放顺序。下文举例说明在计算机中大小端模式的区别。<br />
+如果将一个32位的整数0x12345678存放到一个整型变量（int）中，这个整型变量采用大端或者小端模式在内存中的存储由下表所示。
+为简单起见，本书使用OP0表示一个32位数据的最高字节MSB（Most Significant Byte），使用OP3表示一个32位数据最低字节
+LSB（Least Significant Byte）。
+
+优缺点：<br />
+小端模式 ：强制转换数据不需要调整字节内容。
+大端模式 ：符号位的判定固定为第一个字节。
+  }}}
