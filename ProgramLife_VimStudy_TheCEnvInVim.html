@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushCpp.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/shCore.css" />
+<link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+<title>ProgramLife_VimStudy_TheCEnvInVim</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<ul id="top-nav">
+			<li>
+				<a href="index.html">首页</a>
+			</li>
+			<li>
+				<a href="ProgramLife.html">程序生活</a>
+			</li>
+			<li>
+				<a href="MyLife.html">点滴生活</a>
+			</li>
+			<li>
+				<a href="diary/diary.html">日记</a>
+			</li>
+			<li>
+				<a href="AboutMe.html">关于我</a>
+			</li>
+		</ul>
+		
+		<div id="top-title">
+			默言，在路上
+		</div>
+	</div>
+	<!--
+	<div id="cse">
+	</div>
+	-->
+	<div id="main">
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>程序语言类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_AssemblyStudy.html">汇编语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_CLanguageStudy.html">C语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_LinuxProgram.html">Linux学习</a>
+		</li>
+	</ul>
+	<b>工具类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_VimStudy.html">Vim</a>
+		</li>
+		<li>
+			<a href="ProgramLife_GitStudy.html">Git</a>
+		</li>
+	</ul>
+	<b>其他</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_Others_OftenUse.html">常用整理</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_Knowledge.html">小常识</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_MakeInstall.html">各种构筑过程</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="index.html">首页</a>&nbsp;>&nbsp;
+		<a href="ProgramLife.html">程序生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		
+<div class="toc">
+<ul>
+<li><a href="#toc_0.0.1">要安装插件一览</a>
+<li><a href="#toc_0.0.2">csupport</a>
+<li><a href="#toc_0.0.3">project</a>
+<li><a href="#toc_0.0.4">ctags</a>
+<li><a href="#toc_0.0.5">taglist</a>
+<li><a href="#toc_0.0.6">Doxygen</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h3 id="toc_0.0.1">要安装插件一览</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+csupport<br />
+	实现快捷添加代码，注释等。比如输入\im，就会帮你输入main函数的基本框架。<br />
+	还可以实现一键编译。
+
+<li>
+project<br />
+	用来构建项目的目录文件结构。
+
+<li>
+quickfix<br />
+	已经内置到vim中。
+
+<li>
+ctags<br />
+	已经内置到vim中。
+
+<li>
+taglist<br />
+
+<li>
+DoxygenToolkit<br />
+	结合linux下的doxygen命令，可以生成API文档用的工具。<br />
+	它主要是和vim结合生成符合规范的文档。
+
+</ul>
+
+<h3 id="toc_0.0.2">csupport</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+如何获得帮助<br />
+
+<ul>
+<li>
+help csupport
+
+</ul>
+</ul>
+
+<h3 id="toc_0.0.3">project</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+安装<br />
+
+<ol>
+<li>
+到 www.vim.org 下载 project-1.4.1.tar.gz
+
+<li>
+解压该文件
+
+<li>
+将plugin目录下的project.vim拷贝到 $VIM\vimfiles\plugin 下面
+
+<li>
+将doc目录下的project.txt拷贝到 $VIM\vimfiles\doc 下面
+
+<li>
+在vim中执行 helptags $VIM\vimfiles\doc\ 
+
+</ol>
+<li>
+如何获得帮助<br />
+
+<ul>
+<li>
+help project
+
+</ul>
+<li>
+中文帮助<br />
+
+<ol>
+<li>
+下载中文帮助文件，以project.cnx命名
+
+<li>
+copy以上文件到帮助文档目录下。$VIM\vimfiles\doc\
+
+<li>
+在vim中执行 helptags $VIM\vimfiles\doc\ 
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.4">ctags</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+使用步骤<br />
+
+<ol>
+<li>
+使用ctags命令生成tags文件
+<pre>
+  :!ctags ./src
+</pre>
+
+<li>
+设置vim的tags选项
+<pre>
+  :set tags+=./tags
+</pre>
+
+<li>
+这样就可以使用这个目录下的tags了
+<pre>
+  // 可以使用正则表达式
+  :tag main
+</pre>
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.5">taglist</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+如何获得帮助<br />
+
+<ul>
+<li>
+help taglist.txt
+
+</ul>
+<li>
+打开taglist窗口
+<pre>
+  :TlistToggle
+</pre>
+
+</ul>
+
+<h3 id="toc_0.0.6">Doxygen</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+DoxygenToolkit使用步骤，主要使用以下命令，生成可以用linux下doxygen工具用的注释文件<br />
+
+</ul>
+<p>
+必要的时候，直接修改它自身的插件文件<br />
+</p>
+<ol>
+<li>
+DoxAuthor
+
+<li>
+DoxLic
+
+<li>
+Dox
+
+<li>
+DoxBlock
+
+</ol>
+<li>
+doxygen命令使用<br />
+
+<ol>
+<li>
+使用以下命令生成模板文件
+<pre>
+  // 如果有-s，生成的文件没有注释，否则有详细的注释，s：simple
+  doxygen -s -g filename
+</pre>
+	<a href="resource/02_resource/Doxyfile.txt">我做成的一个配置文件例子</a>
+
+<li>
+使用下面的命令生成文档（输入和输出都在1中生成的配置文件中配置）
+<pre>
+  doxygen configFileName
+</pre>
+
+</ol>
+
+	</div>
+</div>
+		<div id="no-comment">
+		</div>
+	</div>
+	<div id="footer">
+		<hr>
+	    <p>&copy; 2011&nbsp;默言</p>
+	</div>
+</div>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/vimwiki.js" type="text/javascript"></script>
+</body>
+</html>

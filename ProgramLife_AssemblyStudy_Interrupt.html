@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushCpp.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/shCore.css" />
+<link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+<title>ProgramLife_AssemblyStudy_Interrupt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<ul id="top-nav">
+			<li>
+				<a href="index.html">首页</a>
+			</li>
+			<li>
+				<a href="ProgramLife.html">程序生活</a>
+			</li>
+			<li>
+				<a href="MyLife.html">点滴生活</a>
+			</li>
+			<li>
+				<a href="diary/diary.html">日记</a>
+			</li>
+			<li>
+				<a href="AboutMe.html">关于我</a>
+			</li>
+		</ul>
+		
+		<div id="top-title">
+			默言，在路上
+		</div>
+	</div>
+	<!--
+	<div id="cse">
+	</div>
+	-->
+	<div id="main">
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>程序语言类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_AssemblyStudy.html">汇编语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_CLanguageStudy.html">C语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_LinuxProgram.html">Linux学习</a>
+		</li>
+	</ul>
+	<b>工具类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_VimStudy.html">Vim</a>
+		</li>
+		<li>
+			<a href="ProgramLife_GitStudy.html">Git</a>
+		</li>
+	</ul>
+	<b>其他</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_Others_OftenUse.html">常用整理</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_Knowledge.html">小常识</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_MakeInstall.html">各种构筑过程</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="index.html">首页</a>&nbsp;>&nbsp;
+		<a href="ProgramLife.html">程序生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		
+<div class="toc">
+<ul>
+<li><a href="#toc_0.0.1">内中断</a>
+<li><a href="#toc_0.0.2">DOS中断例程的应用</a>
+<li><a href="#toc_0.0.3">外中断</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h3 id="toc_0.0.1">内中断</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+中断的产生（以下四种情况产生中断）
+
+</ul>
+ 
+<table class='center'>
+<tr>
+<td>
+情况
+</td>
+<td>
+中断类型码
+</td>
+</tr>
+<tr>
+<td>
+除法错误，比如除法溢出
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+单步执行
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+执行int0指令
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+执行int指令（int n)
+</td>
+<td>
+n
+</td>
+</tr>
+</table>
+
+<ul>
+<li>
+中断过程
+
+<ol>
+<li>
+取得中断类型码N；
+
+<li>
+pushf
+
+<li>
+TF=0, IF=0
+
+<li>
+push CS
+
+<li>
+push IP
+
+<li>
+(IP)=(N*4), （CS)=(N*4+2)
+
+</ol>
+<li>
+中断处理程序的常规步骤
+
+<ol>
+<li>
+保存用到的寄存器
+
+<li>
+处理中断
+
+<li>
+恢复用到的寄存器
+
+<li>
+用iret指令返回
+<pre>
+  iret指令相当于：
+	  1.pop IP
+	  2.pop CS
+	  3.popf
+</pre>
+
+</ol>
+<li>
+单步中断
+	基本上，CPU在执行完一条指令后，如果检测到标志寄存器的TF位为1，则产生单步中断，引发中断过程。
+	单步中断的中断类型码为1，它所引发的中断过程如下：
+
+<ol>
+<li>
+取得中断类型码1；
+
+<li>
+标志寄存器入栈，TF，IF设置为0
+
+<li>
+CS，IP入栈
+
+<li>
+(IP)=(1*4), (CS)=(1*4+2)
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.2">DOS中断例程的应用</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+int 21h中断例程是DOS提供的中断例程，其中包含了DOS提供给程序员在编程时调用的子程序。
+
+<li>
+int 21h的4ch号功能，程序返回功能
+<pre>
+	mov ah, 4ch		; 程序返回
+	mov al, 0		; 返回值
+	int 21h
+	
+	(ah)=4ch表示调用21号中断例程的4ch号子程序,功能为程序返回,可以提供返回值作为参数。
+</pre>
+
+</ul>
+  
+<h3 id="toc_0.0.3">外中断</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+中断源两类
+
+<ol>
+<li>
+可屏蔽中断
+
+<li>
+不可屏蔽中断（中断类型码固定为2）
+
+</ol>
+</ul>
+
+	</div>
+</div>
+		<div id="no-comment">
+		</div>
+	</div>
+	<div id="footer">
+		<hr>
+	    <p>&copy; 2011&nbsp;默言</p>
+	</div>
+</div>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/vimwiki.js" type="text/javascript"></script>
+</body>
+</html>
