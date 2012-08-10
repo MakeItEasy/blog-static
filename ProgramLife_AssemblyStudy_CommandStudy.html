@@ -1,0 +1,725 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushCpp.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/shCore.css" />
+<link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+<title>ProgramLife_AssemblyStudy_CommandStudy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<ul id="top-nav">
+			<li>
+				<a href="index.html">首页</a>
+			</li>
+			<li>
+				<a href="ProgramLife.html">程序生活</a>
+			</li>
+			<li>
+				<a href="MyLife.html">点滴生活</a>
+			</li>
+			<li>
+				<a href="diary/diary.html">日记</a>
+			</li>
+			<li>
+				<a href="AboutMe.html">关于我</a>
+			</li>
+		</ul>
+		
+		<div id="top-title">
+			默言，在路上
+		</div>
+	</div>
+	<!--
+	<div id="cse">
+	</div>
+	-->
+	<div id="main">
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>程序语言类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_AssemblyStudy.html">汇编语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_CLanguageStudy.html">C语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_LinuxProgram.html">Linux学习</a>
+		</li>
+	</ul>
+	<b>工具类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_VimStudy.html">Vim</a>
+		</li>
+		<li>
+			<a href="ProgramLife_GitStudy.html">Git</a>
+		</li>
+	</ul>
+	<b>其他</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_Others_OftenUse.html">常用整理</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_Knowledge.html">小常识</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_MakeInstall.html">各种构筑过程</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="index.html">首页</a>&nbsp;>&nbsp;
+		<a href="ProgramLife.html">程序生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		
+<div class="toc">
+<ul>
+<li><a href="#toc_0.0.1">指令一览</a>
+<li><a href="#toc_0.0.2">push</a>
+<li><a href="#toc_0.0.3">pop</a>
+<li><a href="#toc_0.0.4">loop</a>
+<li><a href="#toc_0.0.5">and</a>
+<li><a href="#toc_0.0.6">or</a>
+<li><a href="#toc_0.0.7">div</a>
+<li><a href="#toc_0.0.8">jmp</a>
+<li><a href="#toc_0.0.9">jcxz</a>
+<li><a href="#toc_0.0.10">ret &amp;&amp; retf</a>
+<li><a href="#toc_0.0.11">call</a>
+<li><a href="#toc_0.0.12">adc</a>
+<li><a href="#toc_0.0.13">sbb</a>
+<li><a href="#toc_0.0.14">cmp</a>
+<li><a href="#toc_0.0.15">条件转移指令小结</a>
+<li><a href="#toc_0.0.16">movsb</a>
+<li><a href="#toc_0.0.17">movsw</a>
+<li><a href="#toc_0.0.18">pushf &amp; popf</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h3 id="toc_0.0.1">指令一览</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+mov: 传送指令
+
+<li>
+add: 加法
+
+<li>
+sub: 减法
+
+<li>
+loop: 循环
+
+<li>
+inc: 递增,+1
+
+<li>
+dec: 递减,-1
+
+<li>
+push: 入栈
+
+<li>
+pop: 出栈
+
+<li>
+and
+
+<li>
+or
+
+<li>
+div: 除法(除号前为被除数,除号后为除数)
+
+<li>
+jmp: 无条件转移指令
+
+<li>
+jcxz: 有条件转移指令（jmp when cx is zero）
+
+<li>
+ret &amp; retf: return转移指令
+
+<li>
+call: 转移指令，调用子程序
+
+<li>
+mul: 乘法指令，都是8位，用al乘，ax存放；都是16位，用ax乘，用dx存放结果高位，ax存放结果低位。
+
+<li>
+adc: 带进位加法指令。
+
+<li>
+sub: 带借位减法指令。
+
+<li>
+cmp: 比较指令，功能相当于减法指令，只是不保存结果。只对标志寄存器产生影响。
+
+<li>
+movsb
+
+<li>
+movsw
+
+<li>
+shl:逻辑左移指令
+
+<li>
+shr:逻辑右移指令（要移动的位数，可以保存在cl中）最后移出的一位写入CF中，低位/高位补0
+
+<li>
+sti：用于设置IF=1
+
+<li>
+cti：用于设置IF=0
+
+</ul>
+
+<h3 id="toc_0.0.2">push</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+push ax 进行的操作
+
+<ol>
+<li>
+SP = SP-2, SS:SP指向当前栈顶前面的单元，以当前栈顶前面的单元为新的栈顶；
+
+<li>
+将ax中的内容送入SS:SP指向的内存单元处，SS:SP此时指向新栈顶
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.3">pop</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+pop ax 进行的操作
+
+<ol>
+<li>
+将SS:SP指向的内存单元处的数据送入ax中
+
+<li>
+SP = SP+2, SS:SP指向当前栈顶下面的单元，以当前栈顶下面的单元为新的栈顶；
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.4">loop</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+格式：loop 标号 （(cx)=(cx)-1, 如果(cx)!=0,转移到标号处执行）
+
+<li>
+进行的操作
+
+<ol>
+<li>
+(cx)=(cx)-1
+
+<li>
+如果(cx)!=0,(IP)=(IP)+8
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.5">and</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+逻辑与命令，按位进行与运算<br />
+
+</ul>
+<p>
+通过该指令可以将操作对象的相应位设为0，其他位不变。<br />
+例如：
+</p>
+<pre>
+  将al的第6位设为0
+	and al, 10111111B
+</pre>
+  
+<h3 id="toc_0.0.6">or</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+逻辑或命令，按位进行或运算<br />
+
+</ul>
+<p>
+通过该指令可以将操作对象的相应位设为1，其他位不变。<br />
+例如：
+</p>
+<pre>
+  将al的第6位设为1
+	or al, 01000000B
+</pre>
+
+<h3 id="toc_0.0.7">div</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+总结(Page157)
+
+<ol>
+<li>
+除数: 8位和16位两种,在一个寄存器或内存单元中
+
+<li>
+被除数: 默认放在AX或者DX和AX中,如果除数为8位,被除数则为16位,默认在AX中.<br />
+		如果除数为16位,被除数则为32位,在DX和AX中存放,DX存放高16位,AX存放低16位.
+
+<li>
+结果: 如果除数为8位,则AL存储除法操作的商,AH存余数.如果除数为16位,则AX存商,DX存余数.
+
+</ol>
+<li>
+列子及含义
+
+<ol>
+<li>
+div byte ptr ds:[0]
+<pre>
+含义为:
+	(al)=(ax)/((ds)*16+0)的商
+	(ah)=(ax)/((ds)*16+0)的余数
+</pre>
+
+<li>
+div word ptr es:[0]
+<pre>
+含义为:
+	(ax)=[(dx)*10000H+(ax)]/((es)*16+0)的商
+	(dx)=[(dx)*10000H+(ax)]/((es)*16+0)的余数
+</pre>
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.8">jmp</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+格式
+
+<ol>
+<li>
+段内短转移
+<pre>
+  jmp short 标号（转到标号处执行指令）
+  功能为：(IP) = (IP) + 8位位移
+</pre>
+
+<li>
+段内近转移
+<pre>
+  jmp near ptr 标号（转到标号处执行指令）
+  功能为：(IP) = (IP) + 16位位移
+</pre>
+
+<li>
+段间转移（远转移）
+<pre>
+  jmp far ptr 标号
+  功能为：
+  	(CS) = 标号所在段的段地址
+  	(IP) = 标号在段中的偏移地址
+</pre>
+
+</ol>
+<li>
+X位位移是编译器根据标号计算的。<br />
+	计算方法为：X位位移=指令"标号"处的地址- <em><strong>jmp指令后</strong></em> 的第一个字节的地址
+
+<li>
+转移地址在内存中的jmp指令
+
+<ol>
+<li>
+jmp word ptr 内存单元地址（段内转移）
+
+<li>
+jmp dword ptr 内存单元地址（段间转移）
+
+<ul>
+<li>
+（CS）=（内存单元地址+2）
+
+<li>
+（IP）=（内存单元地址）
+
+</ul>
+</ol>
+</ul>
+<h3 id="toc_0.0.9">jcxz</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+格式： jcxz 标号（如果(cx)=0,转移到标号处执行）
+
+<li>
+相当于：
+<pre>
+  if((cx) == 0) jmp short 标号
+</pre>
+
+</ul>
+  
+<h3 id="toc_0.0.10">ret &amp;&amp; retf</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+ret相当于：pop IP
+
+<li>
+retf相当于：
+
+<ol>
+<li>
+pop IP
+
+<li>
+pop CS
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.11">call</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+call进行两步操作：
+
+<ol>
+<li>
+将当前的IP或CS和IP压入栈中
+
+<li>
+转移
+
+</ol>
+<li>
+call指令不能实现短转移
+
+<li>
+call指令的格式
+
+<ol>
+<li>
+call 标号（将当前的IP压栈后，转到标号处执行指令）
+
+<li>
+call far ptr 标号：段间转移
+
+<li>
+call 16位寄存器
+
+<li>
+call word ptr 内存单元地址，相当于：
+<pre>
+	push IP
+	jmp word ptr 内存单元地址
+</pre>
+
+<li>
+call dword ptr 内存单元地址，相当于：
+<pre>
+	push CS
+	push IP
+	jmp dword ptr 内存单元地址
+</pre>
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.12">adc</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+指令格式：adc 操作对象1，操作对象2
+
+<li>
+功能：操作对象1 = 操作对象1 + 操作对象2 + CF
+	比如指令adc ax,bx 实现的功能是：(ax)=(ax)+(bx)+CF
+
+<li>
+加法可以分两步来进行：
+
+<ol>
+<li>
+低位相加；
+
+<li>
+高位相加再加上低位相加产生的进位值。
+
+</ol>
+<li>
+这样提供adc指令的目的，就可以实现更大数据的加法运算。
+
+</ul>
+
+<h3 id="toc_0.0.13">sbb</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+指令格式：sbb 操作对象1，操作对象2
+
+<li>
+功能：操作对象1 = 操作对象1 - 操作对象2 - CF
+	比如指令sbb ax,bx 实现的功能是：(ax)=(ax)-(bx)-CF
+
+<li>
+减法可以分两步来进行：
+
+<ol>
+<li>
+低位相减；
+
+<li>
+高位相减再减去低位相减产生的借位值。
+
+</ol>
+<li>
+这样提供sbb指令的目的，就可以实现更大数据的减法运算。
+
+</ul>
+
+<h3 id="toc_0.0.14">cmp</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+指令格式：cmp 操作对象1，操作对象2
+
+<li>
+功能：计算 操作对象1 - 操作对象2 但并不保存结果，仅仅根据计算结果对标志寄存器进行设置。
+	比如指令cmp ax,ax，做(ax)-(ax)的运算，结果为0，但并不在ax中保存，仅影响flag的相关各位。<br />
+	指令执行后：ZF=1, PF=1, SF=0, CF=0, OF=0
+
+</ul>
+
+<h3 id="toc_0.0.15">条件转移指令小结</h3>
+<p>
+<hr>
+</p>
+
+<table>
+<tr>
+<td>
+指令
+</td>
+<td>
+含义
+</td>
+<td>
+检测的相关标志位
+</td>
+<td>
+备注
+</td>
+</tr>
+<tr>
+<td>
+je
+</td>
+<td>
+等于则转移
+</td>
+<td>
+ZF=1
+</td>
+<td>
+equal
+</td>
+</tr>
+<tr>
+<td>
+jne
+</td>
+<td>
+不等于则转移
+</td>
+<td>
+ZF=0
+</td>
+<td>
+not equal
+</td>
+</tr>
+<tr>
+<td>
+jb
+</td>
+<td>
+低于则转移
+</td>
+<td>
+CF=1
+</td>
+<td>
+below
+</td>
+</tr>
+<tr>
+<td>
+jnb
+</td>
+<td>
+不低于则转移
+</td>
+<td>
+CF=0
+</td>
+<td>
+not below
+</td>
+</tr>
+<tr>
+<td>
+ja
+</td>
+<td>
+高于则转移
+</td>
+<td>
+CF=0且ZF=0
+</td>
+<td>
+above
+</td>
+</tr>
+<tr>
+<td>
+jna
+</td>
+<td>
+不高于则转移
+</td>
+<td>
+CF=1或ZF=1
+</td>
+<td>
+not above
+</td>
+</tr>
+</table>
+
+<h3 id="toc_0.0.16">movsb</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+功能：执行movsb指令相当于进行下面几步
+
+<ol>
+<li>
+((es)*16+(di))=((ds)*16+(si))
+
+<li>
+如果DF=0则：(si)=(si)+1
+				  (di)=(di)+1
+	  如果DF=1则：(si)=(si)-1
+				  (di)=(di)-1
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.17">movsw</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+movsw的功能是将ds:si指向的内存字单元中word送入es:di中，然后根据标志寄存器DF位的值，将si和di递增2或递减2
+
+<li>
+movsb和movsw经常和rep配合使用
+
+<ol>
+<li>
+rep movsb相当于：
+<pre>
+	s:movsb
+		loop s
+</pre>
+
+</ol>
+</ul>
+
+<h3 id="toc_0.0.18">pushf &amp; popf</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+将标识寄存器的值压栈和出栈，为直接访问标志寄存器提供了一种方法。
+
+</ul>
+
+	</div>
+</div>
+		<div id="no-comment">
+		</div>
+	</div>
+	<div id="footer">
+		<hr>
+	    <p>&copy; 2011&nbsp;默言</p>
+	</div>
+</div>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/vimwiki.js" type="text/javascript"></script>
+</body>
+</html>

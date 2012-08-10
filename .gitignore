@@ -1,13 +1,13 @@
-/*.html
-/*/*.html
-/*/*/*.html
-/*/*/*/*.html
-/*/*/*/*/*.html
-/*/*/*/*/*/*.html
-/*/*/*/*/*/*/*.html
+# /*.html
+# /*/*.html
+# /*/*/*.html
+# /*/*/*/*.html
+# /*/*/*/*/*.html
+# /*/*/*/*/*/*.html
+# /*/*/*/*/*/*/*.html
 
-template/*.html
-!template/_header.html
-!template/_footer.html
+# template/*.html
+# !template/_header.html
+# !template/_footer.html
 
 *.swp

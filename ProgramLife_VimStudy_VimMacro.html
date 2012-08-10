@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushCpp.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/shCore.css" />
+<link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+<title>ProgramLife_VimStudy_VimMacro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="all">
+	<div id="header">
+		<ul id="top-nav">
+			<li>
+				<a href="index.html">首页</a>
+			</li>
+			<li>
+				<a href="ProgramLife.html">程序生活</a>
+			</li>
+			<li>
+				<a href="MyLife.html">点滴生活</a>
+			</li>
+			<li>
+				<a href="diary/diary.html">日记</a>
+			</li>
+			<li>
+				<a href="AboutMe.html">关于我</a>
+			</li>
+		</ul>
+		
+		<div id="top-title">
+			默言，在路上
+		</div>
+	</div>
+	<!--
+	<div id="cse">
+	</div>
+	-->
+	<div id="main">
+<!-- 侧边导航栏 -->
+<div id="main_menu" class="navlink">
+	<b>程序语言类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_AssemblyStudy.html">汇编语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_CLanguageStudy.html">C语言</a>
+		</li>
+		<li>
+			<a href="ProgramLife_LinuxProgram.html">Linux学习</a>
+		</li>
+	</ul>
+	<b>工具类</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_VimStudy.html">Vim</a>
+		</li>
+		<li>
+			<a href="ProgramLife_GitStudy.html">Git</a>
+		</li>
+	</ul>
+	<b>其他</b>
+	<hr>
+	<ul>
+		<li>
+			<a href="ProgramLife_Others_OftenUse.html">常用整理</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_Knowledge.html">小常识</a>
+		</li>
+		<li>
+			<a href="ProgramLife_Others_MakeInstall.html">各种构筑过程</a>
+		</li>
+	</ul>
+</div>
+
+<div id="main_area">
+	<!-- 顶部导航栏 -->
+	<div id="main_nav" class="navlink">
+		<a href="index.html">首页</a>&nbsp;>&nbsp;
+		<a href="ProgramLife.html">程序生活</a>
+	</div>
+	<!-- 真正的内容 -->
+	<div id="main_content">
+		
+<div class="toc">
+<ul>
+<li><a href="#toc_0.0.1">录制宏的使用</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h3 id="toc_0.0.1">录制宏的使用</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+操作：这次演示一下宏的用法，请严格按本教程操作。先做一下确认：输入法没有打开，并Esc到normal状态，gg到文首。
+
+<ol>
+<li>
+按qa（q表示开始录制宏，宏的名字为a）
+
+<li>
+再shift+&gt;&gt;（表示按住shift，连按两下&gt;，再放开shift。此时第一行应当向后tab了一下）
+
+<li>
+再j^（此时下移一行，并置光标于行首）
+
+<li>
+再shift+&gt;&gt;再shift+&gt;&gt;（即第二行向后tab两下）
+
+<li>
+再j^（下移一行，并将光标置于行首，为后续操作做准备）
+
+<li>
+再q（表示宏录制结束，Vim会提示记录完成）
+
+<li>
+这样宏录完了，可以用了。
+
+<li>
+再@a，看到了效果了吧？宏执行了一次，即3、4行成功了。还剩下6段，但是你不用按6次@a，而是只要按下6@a就行了！！！
+
+</ol>
+<li>
+参照内容
+<pre>
+以热爱祖国为荣
+以危害祖国为耻
+以服务人民为荣
+以背离人民为耻
+以崇尚科学为荣
+以愚昧无知为耻
+以辛勤劳动为荣
+以好逸恶劳为耻
+以团结互助为荣
+以损人利己为耻
+以诚实守信为荣
+以见利忘义为耻
+以遵纪守法为荣
+以违法乱纪为耻
+以艰苦奋斗为荣
+以骄奢淫逸为耻
+</pre>
+
+</ul>
+
+	</div>
+</div>
+		<div id="no-comment">
+		</div>
+	</div>
+	<div id="footer">
+		<hr>
+	    <p>&copy; 2011&nbsp;默言</p>
+	</div>
+</div>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/vimwiki.js" type="text/javascript"></script>
+</body>
+</html>
