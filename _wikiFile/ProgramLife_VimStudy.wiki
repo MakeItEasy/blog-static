@@ -1,5 +1,6 @@
 %template ProgramLife
 %toc
+%title Vim学习
 
 === 主题 ===
 <hr>
@@ -14,3 +15,7 @@
 === 插件学习 ===
 <hr>
 * [[ProgramLife_VimStudy_PluginCSupport|c-support 插件学习]]
+
+=== 管理插件的插件pathogen ===
+<hr>
+* [https://github.com/tpope/vim-pathogen GitHub上的pathogen主页]
