@@ -93,6 +93,7 @@
 <ul>
 <li><a href="#toc_0.0.1">Win7下E盘无法新建文件问题</a>
 <li><a href="#toc_0.0.2">Windows下如何修改键盘布局</a>
+<li><a href="#toc_0.0.3">Windows下定期执行任务命令</a>
 </ul>
 </ul>
 </ul>
@@ -137,6 +138,22 @@ Icacls 是一种命令行工具，它显示或修改指定文件上的随机访�
 一直“下一步”直到完成。
 
 </ol>
+
+<h3 id="toc_0.0.3">Windows下定期执行任务命令</h3>
+<p>
+<hr>
+</p>
+<ul>
+<li>
+schtasks (示例如下)
+<pre>
+ schtasks /create /sc minute /tn databasebackup /tr e:\DailyBackupDatabase.bat
+ rem 获得帮助
+ schtasks /?
+ schtasks /create /?
+</pre>
+
+</ul>
 
 	</div>
 </div>
