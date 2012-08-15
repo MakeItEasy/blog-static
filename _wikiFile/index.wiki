@@ -10,4 +10,6 @@
 
 === [[AboutMe|关于我]] ===
 
+=== [[diary/diary|日记]] ===
+
 === [[ToDo|TODO列表]] ===
