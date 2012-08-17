@@ -4,3 +4,4 @@
 <hr>
 
 * [[http://www.topcoder.com/|TopCoder:可以参加各种竞赛的网站]]
+* [[http://www.codeplex.com/|CodePlex:在这个网站上可以找到各种开源项目]]
