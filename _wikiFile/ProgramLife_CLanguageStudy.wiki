@@ -1,5 +1,6 @@
 %template ProgramLife
 %toc
+%title C语言学习
 
 === 平时结合实例总结 ===
 <hr>
@@ -24,3 +25,7 @@ LSB（Least Significant Byte）。
 小端模式 ：强制转换数据不需要调整字节内容。
 大端模式 ：符号位的判定固定为第一个字节。
   }}}
+  
+=== 有用的网页资源 ===
+<hr>
+* [[resource/04_webpages/TrucyWeblog(Debug use GDB in c)|C语言中用GDB调试程序]](来自楚水网志的博客:http://www.trucy.org/blog/ )
