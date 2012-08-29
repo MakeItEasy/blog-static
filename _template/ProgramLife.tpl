@@ -64,6 +64,9 @@
 		<li>
 			<a href="%root_path%ProgramLife_GitStudy.html">Git</a>
 		</li>
+		<li>
+			<a href="%root_path%ProgramLife_SVNStudy.html">SVN</a>
+		</li>
 	</ul>
 	<b>其他</b>
 	<hr>
@@ -91,6 +94,7 @@
 		%content%
 	</div>
 </div>
+
 		<div id="no-comment">
 		</div>
 	</div>
