@@ -28,4 +28,4 @@ LSB（Least Significant Byte）。
   
 === 有用的网页资源 ===
 <hr>
-* [[local:../resource/04_webpages/TrucyWeblog(Debug use GDB in c).htm|C语言中用GDB调试程序]](来自楚水网志的博客:http://www.trucy.org/blog/ )
+* [[file:///resource/04_webpages/TrucyWeblog(Debug use GDB in c).htm|C语言中用GDB调试程序]](来自楚水网志的博客:http://www.trucy.org/blog/ )
