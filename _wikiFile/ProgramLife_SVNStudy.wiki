@@ -1,0 +1,21 @@
+%template ProgramLife
+%toc
+%title SVN学习
+
+=== SVN服务器备份 ===
+<hr>
+* 完全备份和增量备份svn
+{{{
+  svnadmin dump /svnroot/project > /svnbak/project.svn.bak
+  }}}
+* dump备份还原
+{{{
+  #创建一个新的版本库
+  svnadmin create /svnroot/project
+  #现还原完全备份
+  svnadmin load /svnroot/project < project.svn.bak  
+  }}}
+* 热拷贝版本库目录，可以直接拿来用
+{{{
+  svnadmin hotcopy /svnroot/project /svnbak/project.svn.bak/
+  }}}
