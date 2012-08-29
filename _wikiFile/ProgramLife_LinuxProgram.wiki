@@ -1,5 +1,6 @@
 %template ProgramLife
 %toc
+%title Linux程序设计
 
 
 * [[ProgramLife_LinuxProgram_DesignPoint|Linux程序设计整理要点]]
@@ -9,7 +10,7 @@
 * man help 编号意义
 
     | 领域 | 描述               | 说明                                                |
-    |------+--------------------+-----------------------------------------------------|
+    |------|--------------------|-----------------------------------------------------|
     | 1    | 用户命令           | 可由任何人启动的,如env、cat、man、touch文档         |
     | 2    | 系统调用或内核函数 | 即由内核提供的函数 如link、sethostname、mkdir       |
     | 3    | 库程序             | 即库函数 如acosh、asctime、btree、locale            |

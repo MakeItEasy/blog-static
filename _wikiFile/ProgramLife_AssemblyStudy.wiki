@@ -13,9 +13,9 @@
 
 === Resource && website ===
 <hr>
-* [http://www.aogosoft.com/index.asp?format=text AoGo汇编小站]
-* [http://www.docin.com/p-195211142.html 王爽课后习题答案]
-* [[resource\01_book\TheAnswerOfAssembly(wangshuang).chm|王爽课后习题答案chm版]]
+* [[http://www.aogosoft.com/index.asp?format=text|AoGo汇编小站]]
+* [[http://www.docin.com/p-195211142.html|王爽课后习题答案]]
+* [[local:../resource/01_book/TheAnswerOfAssembly(wangshuang).chm|王爽课后习题答案chm版]]
 
 === TODOs & FAQ ===
 <hr>

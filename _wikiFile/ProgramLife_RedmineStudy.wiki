@@ -3,4 +3,4 @@
 
 === Redmine ===
 <hr>
-* [[resource\03_mindmap\Redmine.mm|Redmine思维导图]]
+* [[local:../resource/03_mindmap/Redmine.mm|Redmine思维导图]]

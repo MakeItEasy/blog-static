@@ -77,7 +77,7 @@
   // 如果有-s，生成的文件没有注释，否则有详细的注释，s：simple
   doxygen -s -g filename
   }}}
-	[[resource/02_resource/Doxyfile.txt|我做成的一个配置文件例子]]
+	[[local:../resource/02_resource/Doxyfile.txt|我做成的一个配置文件例子]]
 	# 使用下面的命令生成文档（输入和输出都在1中生成的配置文件中配置）
 {{{
   doxygen configFileName

@@ -10,7 +10,7 @@
 
 === 总结概念 ===
 <hr>
-* [[resource\01_book\Memory management in C The heap and the stack.pdf|一篇非常好的讲解堆和栈的论文]]
+* [[local:../resource/01_book/Memory management in C The heap and the stack.pdf|一篇非常好的讲解堆和栈的论文]]
 * 大端模式和小端模式
 {{{
 端模式（Endian）的这个词出自JonathanSwift书写的《格列佛游记》。这本书根据将鸡蛋敲开的方法不同将所有的人分为两类，
@@ -28,4 +28,4 @@ LSB（Least Significant Byte）。
   
 === 有用的网页资源 ===
 <hr>
-* [[resource/04_webpages/TrucyWeblog(Debug use GDB in c)|C语言中用GDB调试程序]](来自楚水网志的博客:http://www.trucy.org/blog/ )
+* [[local:../resource/04_webpages/TrucyWeblog(Debug use GDB in c).htm|C语言中用GDB调试程序]](来自楚水网志的博客:http://www.trucy.org/blog/ )
