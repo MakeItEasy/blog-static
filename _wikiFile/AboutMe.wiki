@@ -1,8 +1,13 @@
 === 自我介绍 ===
 
-| 姓名     | 代如刚                                   |
-| 性别     | 男                                       |
-| 民族     | 汉                                       |
-| Email    | rugang6891@gmail.com, rugang6891@163.com |
-| 常用昵称 | moyan, 默言                              |
+| 姓名         | 代如刚                                   |
+| 性别         | 男                                       |
+| 民族         | 汉                                       |
+| Email        | rugang6891@gmail.com, rugang6891@163.com |
+| 常用昵称     | moyan, 默言                              |
+| 主攻方向     | Java, Ruby, Javascript, CSS              |
+| 操作系统     | Windows, Linux                           |
+| 喜欢编辑器   | Vim, Emeditor                            |
+| 版本控制工具 | Git                                      |
+| 其他工具     | Totalcmd                                 |
 
